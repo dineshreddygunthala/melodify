@@ -1,11 +1,12 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 import songsData from '@/data/songs'
 import useStore from '@/lib/zustandStore'
 import { Heart } from 'lucide-react'
 
-export default function SongsPage() {
+function SongsPageInner() {
   const searchParams = useSearchParams()
   const albumId = searchParams.get('albumId')
 
@@ -67,5 +68,14 @@ export default function SongsPage() {
         </div>
       )}
     </div>
+  )
+}
+
+// ✅ This wrapper allows useSearchParams to work without changing file structure
+export default function SongsPage() {
+  return (
+    <Suspense fallback={<div className="p-4 text-white">Loading songs...</div>}>
+      <SongsPageInner />
+    </Suspense>
   )
 }
