@@ -1,0 +1,81 @@
+const songs = {
+  eng1: [
+    { id: 'e1', title: 'Shape of You', singer: 'Ed Sheeran', cinema: 'Divide', audio: '/songs/shape-of-you.mp3' },
+    { id: 'e2', title: 'Blinding Lights', singer: 'The Weeknd', cinema: 'After Hours', audio: '/songs/blinding-lights.mp3' },
+    { id: 'e3', title: 'Levitating', singer: 'Dua Lipa', cinema: 'Future Nostalgia', audio: '/songs/levitating.mp3' },
+    { id: 'e4', title: 'Perfect', singer: 'Ed Sheeran', cinema: 'Divide', audio: '/songs/perfect.mp3' },
+    { id: 'e5', title: 'Stay', singer: 'The Kid LAROI', cinema: 'Stay', audio: '/songs/stay.mp3' },
+  ],
+  eng2: [
+    { id: 'e6', title: 'Senorita', singer: 'Shawn Mendes', cinema: 'Romance', audio: '/songs/senorita.mp3' },
+    { id: 'e7', title: 'Peaches', singer: 'Justin Bieber', cinema: 'Justice', audio: '/songs/peaches.mp3' },
+    { id: 'e8', title: 'Someone You Loved', singer: 'Lewis Capaldi', cinema: 'Divinely Uninspired', audio: '/songs/someone-you-loved.mp3' },
+    { id: 'e9', title: 'Memories', singer: 'Maroon 5', cinema: 'Jordi', audio: '/songs/memories.mp3' },
+    { id: 'e10', title: 'Bad Habits', singer: 'Ed Sheeran', cinema: 'Equals', audio: '/songs/bad-habits.mp3' },
+  ],
+  eng3: [
+    { id: 'e11', title: 'Happier', singer: 'Marshmello', cinema: 'Happier - Single', audio: '/songs/happier.mp3' },
+    { id: 'e12', title: 'Savage Love', singer: 'Jason Derulo', cinema: 'Savage Love', audio: '/songs/savage-love.mp3' },
+    { id: 'e13', title: 'Watermelon Sugar', singer: 'Harry Styles', cinema: 'Fine Line', audio: '/songs/watermelon-sugar.mp3' },
+    { id: 'e14', title: 'Attention', singer: 'Charlie Puth', cinema: 'Voicenotes', audio: '/songs/attention.mp3' },
+    { id: 'e15', title: 'Thunder', singer: 'Imagine Dragons', cinema: 'Evolve', audio: '/songs/thunder.mp3' },
+  ],
+  tel1: [
+    { id: 't1', title: 'Butta Bomma', singer: 'Armaan Malik', cinema: 'Ala Vaikunthapurramuloo', audio: '/songs/butta-bomma.mp3' },
+    { id: 't2', title: 'Samajavaragamana', singer: 'Sid Sriram', cinema: 'Ala Vaikunthapurramuloo', audio: '/songs/samajavaragamana.mp3' },
+    { id: 't3', title: 'Ramulo Ramulaa', singer: 'Anurag Kulkarni', cinema: 'Ala Vaikunthapurramuloo', audio: '/songs/ramulo-ramulaa.mp3' },
+    { id: 't4', title: 'Srivalli', singer: 'Javed Ali', cinema: 'Pushpa', audio: '/songs/srivalli.mp3' },
+    { id: 't5', title: 'Oo Antava', singer: 'Indravathi Chauhan', cinema: 'Pushpa', audio: '/songs/oo-antava.mp3' },
+  ],
+  tel2: [
+    { id: 't6', title: 'Vachindamma', singer: 'Sid Sriram', cinema: 'Geetha Govindam', audio: '/songs/vachindamma.mp3' },
+    { id: 't7', title: 'Inkem Inkem', singer: 'Sid Sriram', cinema: 'Geetha Govindam', audio: '/songs/inkem-inkem.mp3' },
+    { id: 't8', title: 'Nee Kannu Neeli', singer: 'Javed Ali', cinema: 'Uppena', audio: '/songs/nee-kannu-neeli.mp3' },
+    { id: 't9', title: 'Pilla Puli', singer: 'Anurag Kulkarni', cinema: 'Sita Ramam', audio: '/songs/pilla-puli.mp3' },
+    { id: 't10', title: 'Lahe Lahe', singer: 'Kaala Bhairava', cinema: 'Vakeel Saab', audio: '/songs/lahe-lahe.mp3' },
+  ],
+  tam1: [
+    { id: 'ta1', title: 'Why This Kolaveri Di', singer: 'Dhanush', cinema: '3', audio: '/songs/kolaveri.mp3' },
+    { id: 'ta2', title: 'Vaathi Coming', singer: 'Anirudh Ravichander', cinema: 'Master', audio: '/songs/vaathi-coming.mp3' },
+    { id: 'ta3', title: 'Kutty Story', singer: 'Vijay', cinema: 'Master', audio: '/songs/kutty-story.mp3' },
+    { id: 'ta4', title: 'Rowdy Baby', singer: 'Dhanush', cinema: 'Maari 2', audio: '/songs/rowdy-baby.mp3' },
+    { id: 'ta5', title: 'Kutti Kudiye', singer: 'Anirudh', cinema: 'Doctor', audio: '/songs/kutti-kudiye.mp3' },
+  ],
+  tam2: [
+    { id: 'ta6', title: 'Anbil Avan', singer: 'Shreya Ghoshal', cinema: 'Vinnaithaandi Varuvaayaa', audio: '/songs/anbil-avan.mp3' },
+    { id: 'ta7', title: 'Munbe Vaa', singer: 'Naresh Iyer', cinema: 'Sillunu Oru Kadhal', audio: '/songs/munbe-vaa.mp3' },
+    { id: 'ta8', title: 'Aalaporan Thamizhan', singer: 'Kailash Kher', cinema: 'Mersal', audio: '/songs/aalaporan.mp3' },
+    { id: 'ta9', title: 'Suttrum Vizhi', singer: 'Harris Jayaraj', cinema: 'Ghajini', audio: '/songs/suttrum-vizhi.mp3' },
+    { id: 'ta10', title: 'Kanave Kanave', singer: 'Anirudh', cinema: 'David', audio: '/songs/kanave.mp3' },
+  ],
+  hin1: [
+    { id: 'h1', title: 'Tum Hi Ho', singer: 'Arijit Singh', cinema: 'Aashiqui 2', audio: '/songs/tum-hi-ho.mp3' },
+    { id: 'h2', title: 'Kesariya', singer: 'Arijit Singh', cinema: 'Brahmastra', audio: '/songs/kesariya.mp3' },
+    { id: 'h3', title: 'Tera Yaar Hoon Main', singer: 'Arijit Singh', cinema: 'Sonu Ke Titu Ki Sweety', audio: '/songs/tera-yaar.mp3' },
+    { id: 'h4', title: 'Apna Bana Le', singer: 'Arijit Singh', cinema: 'Bhediya', audio: '/songs/apna-bana-le.mp3' },
+    { id: 'h5', title: 'Shayad', singer: 'Arijit Singh', cinema: 'Love Aaj Kal', audio: '/songs/shayad.mp3' },
+  ],
+  hin2: [
+    { id: 'h6', title: 'Bekhayali', singer: 'Sachet Tandon', cinema: 'Kabir Singh', audio: '/songs/bekhayali.mp3' },
+    { id: 'h7', title: 'Raataan Lambiyan', singer: 'Jubin Nautiyal', cinema: 'Shershaah', audio: '/songs/raataan-lambiyan.mp3' },
+    { id: 'h8', title: 'Dil Diyan Gallan', singer: 'Atif Aslam', cinema: 'Tiger Zinda Hai', audio: '/songs/dil-diyan.mp3' },
+    { id: 'h9', title: 'Tujhe Kitna Chahne Lage', singer: 'Arijit Singh', cinema: 'Kabir Singh', audio: '/songs/tujhe-kitna.mp3' },
+    { id: 'h10', title: 'Kaise Hua', singer: 'Vishal Mishra', cinema: 'Kabir Singh', audio: '/songs/kaise-hua.mp3' },
+  ],
+  kan1: [
+    { id: 'k1', title: 'Karabuu', singer: 'Chandan Shetty', cinema: 'Pogaru', audio: '/songs/karabuu.mp3' },
+    { id: 'k2', title: 'Raajakumara', singer: 'Vijay Prakash', cinema: 'Raajakumara', audio: '/songs/raajakumara.mp3' },
+    { id: 'k3', title: 'Yenammi Yenammi', singer: 'Vijay Prakash', cinema: 'Ayogya', audio: '/songs/yenammi.mp3' },
+    { id: 'k4', title: 'Belageddu', singer: 'Vasuki Vaibhav', cinema: 'Kirik Party', audio: '/songs/belageddu.mp3' },
+    { id: 'k5', title: 'Hale Dil', singer: 'Kunal Ganjawala', cinema: 'Kendasampige', audio: '/songs/hale-dil.mp3' },
+  ],
+  mal1: [
+    { id: 'm1', title: 'Jimikki Kammal', singer: 'Vineeth Sreenivasan', cinema: 'Velipadinte Pusthakam', audio: '/songs/jimikki.mp3' },
+    { id: 'm2', title: 'Entammede Jimikki', singer: 'Renjith Unni', cinema: 'Velipadinte Pusthakam', audio: '/songs/entammede.mp3' },
+    { id: 'm3', title: 'Malare', singer: 'Vijay Yesudas', cinema: 'Premam', audio: '/songs/malare.mp3' },
+    { id: 'm4', title: 'Aathmavil', singer: 'Shreya Ghoshal', cinema: 'Anarkali', audio: '/songs/aathmavil.mp3' },
+    { id: 'm5', title: 'Pavizha Mazha', singer: 'K.S Harisankar', cinema: 'Athiran', audio: '/songs/pavizha.mp3' },
+  ],
+}
+
+export default songs
