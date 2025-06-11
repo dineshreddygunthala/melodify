@@ -52,48 +52,46 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900 via-indigo-900 to-gray-900 flex items-center justify-center px-4">
-      <div className="w-full max-w-sm bg-white text-black rounded-xl shadow-2xl px-6 py-8 space-y-6">
-        <h2 className="text-2xl font-extrabold text-center text-gray-800">Sign in to your account</h2>
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-r from-purple-900 via-indigo-900 to-gray-900 text-white">
+      <div className="w-full sm:max-w-md backdrop-blur-md bg-white/10 border border-white/10 p-6 rounded-2xl shadow-2xl">
+        <h2 className="text-3xl font-bold mb-6 text-center text-indigo-300">Welcome Back</h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <Input
-              placeholder="you@example.com"
-              className="h-10 text-sm text-black"
+              placeholder="Email"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('identifier')}
             />
             {errors.identifier && (
-              <p className="text-xs text-red-600 mt-1">{errors.identifier.message}</p>
+              <p className="text-xs text-red-400 mt-1">{errors.identifier.message}</p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
             <Input
               type="password"
-              placeholder="Enter your password"
-              className="h-10 text-sm text-black"
+              placeholder="Password"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('password')}
             />
             {errors.password && (
-              <p className="text-xs text-red-600 mt-1">{errors.password.message}</p>
+              <p className="text-xs text-red-400 mt-1">{errors.password.message}</p>
             )}
           </div>
 
           <Button
             type="submit"
-            className="w-full h-10 text-sm bg-indigo-600 hover:bg-indigo-700 transition-colors text-white"
+            className="w-full h-10 text-sm bg-indigo-600 hover:bg-indigo-700 transition-all text-white rounded-full"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Signing in...' : 'Sign In'}
           </Button>
         </form>
 
-        <p className="text-sm text-center text-gray-600">
+        <p className="text-xs mt-5 text-center text-white/60">
           Don&apos;t have an account?{' '}
-          <Link href="/register" className="text-indigo-600 hover:underline">
+          <Link href="/register" className="text-indigo-400 hover:underline">
             Register
           </Link>
         </p>

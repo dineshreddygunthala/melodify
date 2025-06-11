@@ -48,69 +48,69 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white">
-      <div className="w-full sm:max-w-md bg-white text-black p-6 rounded-xl shadow-2xl">
-        <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Create Account</h2>
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-r from-purple-900 via-indigo-900 to-gray-900 text-white">
+      <div className="w-full sm:max-w-md backdrop-blur-md bg-white/10 border border-white/10 p-6 rounded-2xl shadow-2xl">
+        <h2 className="text-3xl font-bold mb-6 text-center text-indigo-300">Create Account</h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <div>
             <Input
               placeholder="Full Name"
-              className="h-10 text-sm text-black"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('fullName')}
             />
-            <p className="text-xs text-red-500 mt-1">{errors.fullName?.message}</p>
+            <p className="text-xs text-red-400 mt-1">{errors.fullName?.message}</p>
           </div>
 
           <div>
             <Input
               type="email"
               placeholder="Email"
-              className="h-10 text-sm text-black"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('email')}
             />
-            <p className="text-xs text-red-500 mt-1">{errors.email?.message}</p>
+            <p className="text-xs text-red-400 mt-1">{errors.email?.message}</p>
           </div>
 
           <div>
             <Input
               placeholder="Age"
-              className="h-10 text-sm text-black"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('age')}
             />
-            <p className="text-xs text-red-500 mt-1">{errors.age?.message}</p>
+            <p className="text-xs text-red-400 mt-1">{errors.age?.message}</p>
           </div>
 
           <div>
             <Input
               placeholder="Mobile Number"
-              className="h-10 text-sm text-black"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('mobile')}
             />
-            <p className="text-xs text-red-500 mt-1">{errors.mobile?.message}</p>
+            <p className="text-xs text-red-400 mt-1">{errors.mobile?.message}</p>
           </div>
 
           <div>
             <Input
               type="password"
               placeholder="Password"
-              className="h-10 text-sm text-black"
+              className="h-10 text-sm bg-white/20 text-white placeholder:text-white/70"
               {...register('password')}
             />
-            <p className="text-xs text-red-500 mt-1">{errors.password?.message}</p>
+            <p className="text-xs text-red-400 mt-1">{errors.password?.message}</p>
           </div>
 
           <Button
             type="submit"
-            className="w-full h-10 text-sm bg-indigo-600 hover:bg-indigo-700 transition text-white"
+            className="w-full h-10 text-sm bg-indigo-600 hover:bg-indigo-700 transition-all text-white rounded-full"
           >
             Sign Up
           </Button>
         </form>
 
-        <p className="text-xs mt-5 text-center text-gray-600">
+        <p className="text-xs mt-5 text-center text-white/60">
           Already have an account?{' '}
-          <Link href="/login" className="text-indigo-600 hover:underline">
+          <Link href="/login" className="text-indigo-400 hover:underline">
             Login
           </Link>
         </p>
