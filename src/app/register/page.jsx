@@ -48,15 +48,15 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-3 bg-gray-950 text-white">
-      <div className="w-full sm:max-w-md bg-white text-black p-4 rounded-md shadow-md">
-        <h2 className="text-lg font-semibold mb-3 text-center">Register</h2>
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white">
+      <div className="w-full sm:max-w-md bg-white text-black p-6 rounded-xl shadow-2xl">
+        <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Create Account</h2>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
             <Input
               placeholder="Full Name"
-              className="h-9 text-sm"
+              className="h-10 text-sm text-black"
               {...register('fullName')}
             />
             <p className="text-xs text-red-500 mt-1">{errors.fullName?.message}</p>
@@ -66,7 +66,7 @@ export default function RegisterPage() {
             <Input
               type="email"
               placeholder="Email"
-              className="h-9 text-sm"
+              className="h-10 text-sm text-black"
               {...register('email')}
             />
             <p className="text-xs text-red-500 mt-1">{errors.email?.message}</p>
@@ -75,7 +75,7 @@ export default function RegisterPage() {
           <div>
             <Input
               placeholder="Age"
-              className="h-9 text-sm"
+              className="h-10 text-sm text-black"
               {...register('age')}
             />
             <p className="text-xs text-red-500 mt-1">{errors.age?.message}</p>
@@ -84,7 +84,7 @@ export default function RegisterPage() {
           <div>
             <Input
               placeholder="Mobile Number"
-              className="h-9 text-sm"
+              className="h-10 text-sm text-black"
               {...register('mobile')}
             />
             <p className="text-xs text-red-500 mt-1">{errors.mobile?.message}</p>
@@ -94,20 +94,23 @@ export default function RegisterPage() {
             <Input
               type="password"
               placeholder="Password"
-              className="h-9 text-sm"
+              className="h-10 text-sm text-black"
               {...register('password')}
             />
             <p className="text-xs text-red-500 mt-1">{errors.password?.message}</p>
           </div>
 
-          <Button type="submit" className="w-full h-9 text-sm">
+          <Button
+            type="submit"
+            className="w-full h-10 text-sm bg-indigo-600 hover:bg-indigo-700 transition text-white"
+          >
             Sign Up
           </Button>
         </form>
 
-        <p className="text-xs mt-4 text-center">
+        <p className="text-xs mt-5 text-center text-gray-600">
           Already have an account?{' '}
-          <Link href="/login" className="text-blue-600 hover:underline">
+          <Link href="/login" className="text-indigo-600 hover:underline">
             Login
           </Link>
         </p>

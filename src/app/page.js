@@ -6,38 +6,40 @@ import { ChevronRight } from 'lucide-react'
 
 export default function HomePage() {
   return (
-    <div className="space-y-6 sm:space-y-10 px-0">
+    <div className="space-y-10 px-4 sm:px-8 py-6">
       {Object.entries(albums).map(([language, albumList]) => (
         <section key={language}>
-          {/* Section header */}
-          <div className="flex justify-between items-center mb-2 sm:mb-4 px-2 sm:px-6">
-            <h2 className="text-[11px] sm:text-2xl font-semibold">
+          {/* Section Header */}
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl sm:text-3xl font-semibold text-indigo-900 capitalize tracking-tight">
               {language} Albums
             </h2>
             <Link
               href={`/albums/${language.toLowerCase()}`}
-              className="text-blue-400 flex items-center text-[10px] sm:text-base hover:underline"
+              className="flex items-center gap-1 text-sm sm:text-base text-indigo-600 hover:underline"
             >
-              View More <ChevronRight size={12} className="ml-1" />
+              View More <ChevronRight size={18} />
             </Link>
           </div>
 
-          {/* Album list */}
-          <div className="flex space-x-2 sm:space-x-4 overflow-x-auto pb-1 sm:pb-2 px-2 sm:px-6">
+          {/* Album List */}
+          <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-indigo-400 scrollbar-track-indigo-100 pb-2">
             {albumList.map((album) => (
               <Link
                 key={album.id}
                 href={`/songs?albumId=${album.id}`}
-                className="min-w-[90px] sm:min-w-[160px] bg-white/10 rounded-md overflow-hidden hover:scale-105 transition"
+                className="min-w-[120px] sm:min-w-[180px] bg-white rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 <img
                   src={album.image}
                   alt={album.title}
-                  className="w-full h-16 sm:h-32 object-cover"
+                  className="w-full h-24 sm:h-40 object-cover rounded-t-xl"
                 />
-                <p className="p-1 sm:p-2 text-[9px] sm:text-sm text-center">
-                  {album.title}
-                </p>
+                <div className="px-2 py-2">
+                  <p className="text-center text-[11px] sm:text-sm font-semibold text-gray-800 line-clamp-2 leading-tight">
+                    {album.title}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
