@@ -15,11 +15,17 @@ export default function WelcomePage() {
   }, [router])
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-700 to-purple-900 text-white">
-      <div className="text-center space-y-4">
-        <h1 className="text-5xl font-bold animate-pulse">🎵 Welcome to Melody 🎵</h1>
-        <p className="text-lg">Get ready to explore music like never before...</p>
-        <p className="text-sm text-gray-200">Redirecting in 10 seconds...</p>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-700 to-purple-900 text-white px-4">
+      <div className="text-center space-y-4 max-w-xl w-full">
+        <h1 className="text-3xl sm:text-5xl font-bold animate-pulse">
+          🎵 Welcome to Melody 🎵
+        </h1>
+        <p className="text-base sm:text-lg">
+          Get ready to explore music like never before...
+        </p>
+        <p className="text-sm sm:text-base text-gray-200">
+          Redirecting in 5 seconds...
+        </p>
       </div>
     </div>
   )
